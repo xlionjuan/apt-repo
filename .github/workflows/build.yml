@@ -11,7 +11,7 @@ permissions:
     id-token: write
   
 env:
-    REPO_NAME: XLion-APT-Repo
+    REPO_NAME: xlion-apt-repo
     CODENAME: main
     COMPONENTS: main
     ARCHITECTURES: amd64 arm64
