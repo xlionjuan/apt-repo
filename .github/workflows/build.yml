@@ -1,8 +1,8 @@
 on:
     workflow_dispatch:
-    #release:
-      #types:
-        #- published
+      #release:
+        #types:
+          #- published
   
   permissions:
     contents: read
@@ -28,11 +28,8 @@ on:
           uses: actions/configure-pages@v4
         - name: Create packages
           run: |
-            ...
-            do something funny to create your packages using e.g. fpm, nfpm, ....
-            ...
             wget https://github.com/rustdesk/rustdesk/releases/download/1.3.0/rustdesk-1.3.0-x86_64.deb
-
+  
         - uses: morph027/apt-repo-action@v2
           id: create-apt-repo
           with:
@@ -46,6 +43,7 @@ on:
           with:
             name: github-pages
             path: ${{ steps.create-apt-repo.outputs.dir }}
+  
     deploy:
       environment:
         name: github-pages
@@ -61,6 +59,7 @@ on:
             echo ':rocket:' >> $GITHUB_STEP_SUMMARY
             echo '' >> $GITHUB_STEP_SUMMARY
             echo '```bash' >> $GITHUB_STEP_SUMMARY
-            echo 'curl -sfLo /etc/apt.trusted.gpg.d/${{ needs.build.outputs.keyring }}.asc ${{ steps.deploy-pages.outputs.page_url }}gpg.key' >> $GITHUB_STEP_SUMMARY
+            echo 'curl -sfLo /etc/apt/trusted.gpg.d/${{ needs.build.outputs.keyring }}.asc ${{ steps.deploy-pages.outputs.page_url }}gpg.key' >> $GITHUB_STEP_SUMMARY
             echo 'echo "deb ${{ steps.deploy-pages.outputs.page_url }} ${{ env.CODENAME }} ${{ env.COMPONENTS }}" >/etc/apt/sources.list.d/${{ env.REPO_NAME }}.list' >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
+  
