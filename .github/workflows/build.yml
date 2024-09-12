@@ -5,18 +5,18 @@ on:
 
 
 
-  permissions:
+permissions:
     contents: read
     pages: write
     id-token: write
   
-  env:
+env:
     REPO_NAME: XLion-APT-Repo
     CODENAME: main
     COMPONENTS: main
     ARCHITECTURES: amd64 arm64
   
-  jobs:
+jobs:
     build:
       runs-on: ubuntu-latest
       outputs:
