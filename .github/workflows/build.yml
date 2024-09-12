@@ -15,7 +15,7 @@ env:
     CODENAME: main
     COMPONENTS: main
     ARCHITECTURES: amd64 arm64
-    SCAN-DIR: /tmps
+    SCAN-DIR: /tmp
   
 jobs:
     build:
