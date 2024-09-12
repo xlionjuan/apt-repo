@@ -39,6 +39,7 @@ jobs:
             codename: ${{ env.CODENAME }}
             components: ${{ env.COMPONENTS }}
             architectures: ${{ env.ARCHITECTURES }}
+            section: main
 
         - name: Upload Pages artifact
           uses: actions/upload-pages-artifact@v3
