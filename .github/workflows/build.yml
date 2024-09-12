@@ -15,7 +15,6 @@ env:
     CODENAME: main
     COMPONENTS: main
     ARCHITECTURES: amd64
-    SECTION: main
   
 jobs:
     build:
@@ -40,8 +39,7 @@ jobs:
             codename: ${{ env.CODENAME }}
             components: ${{ env.COMPONENTS }}
             architectures: ${{ env.ARCHITECTURES }}
-            section: ${{ env.SECTION }}
-            
+
         - name: Upload Pages artifact
           uses: actions/upload-pages-artifact@v3
           with:
