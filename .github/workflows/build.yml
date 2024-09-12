@@ -1,5 +1,3 @@
-
-# yamllint disable rule:truthy
 on:
     workflow_dispatch:
     #release:
