@@ -14,7 +14,8 @@ env:
     REPO_NAME: xlion-apt-repo
     CODENAME: main
     COMPONENTS: main
-    ARCHITECTURES: amd64 arm64
+    ARCHITECTURES: amd64
+    SECTION: main
   
 jobs:
     build:
