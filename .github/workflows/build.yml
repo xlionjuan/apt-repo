@@ -1,10 +1,5 @@
-
-# yamllint disable rule:truthy
 on:
     workflow_dispatch:
-    release:
-      types:
-        - published
   
   permissions:
     contents: read
@@ -12,7 +7,7 @@ on:
     id-token: write
   
   env:
-    REPO_NAME: "XLion APT Repo"
+    REPO_NAME: XLion-APT-Repo
     CODENAME: main
     COMPONENTS: main
     ARCHITECTURES: amd64 arm64
