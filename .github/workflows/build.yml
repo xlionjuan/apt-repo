@@ -1,7 +1,10 @@
 name: Create Repo
 
 on:
-    workflow_dispatch:
+  schedule:
+    # Every 6AM
+    - cron: "0 6 * * *"
+  workflow_dispatch:
 
 
 
