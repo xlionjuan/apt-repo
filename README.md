@@ -23,3 +23,7 @@ EOF
 ```bash
 echo "deb [signed-by=/usr/share/keyrings/xlion-repo.gpg] https://xlionjuan.github.io/apt-repo main main" | sudo tee /etc/apt/sources.list.d/xlion-repo.list
 ```
+
+## Conatins
+
+Latest [RustDesk](https://github.com/rustdesk/rustdesk) Nightly x86_64.
