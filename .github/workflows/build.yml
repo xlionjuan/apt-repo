@@ -29,7 +29,7 @@ jobs:
           uses: actions/configure-pages@v4
         - name: Create packages
           run: |
-            wget https://github.com/rustdesk/rustdesk/releases/download/1.3.0/rustdesk-1.3.0-x86_64.deb
+            wget -O rustdesk.deb https://github.com/rustdesk/rustdesk/releases/download/1.3.0/rustdesk-1.3.0-x86_64.deb
 
         - uses: morph027/apt-repo-action@main
           id: create-apt-repo
